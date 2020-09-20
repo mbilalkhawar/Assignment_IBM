@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="ITestListener.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Assignment_IBM_HomePage">
+        <classes>
+            <class name="Tests.HomePageTest">
+                <methods>
+                    <include name="checkTitleOfHomePage"/>
+                    <include name="refreshActivity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+        <test verbose="2" preserve-order="true" name="Assignment_IBM_LoginPage">
+            <classes>
+                <class name="Tests.LoginPageTest">
+                    <methods>
+                        <include name="testCurrentTitleOfThePage"/>
+                        <include name="navigateToSignInPage"/>
+                        <include name="loginToHomePage"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+</suite>
