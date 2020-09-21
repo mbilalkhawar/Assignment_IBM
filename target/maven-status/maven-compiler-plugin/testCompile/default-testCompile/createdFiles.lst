@@ -1,2 +1,3 @@
+dockerSeleniumGrid\parallelTesting.class
 Tests\HomePageTest.class
 Tests\LoginPageTest.class

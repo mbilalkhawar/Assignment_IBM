@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTesting" parallel="methods" thread-count="2">
+    <test verbose="2" preserve-order="true" name="Assignment_IBM_ParallelTesting">
+        <classes>
+            <class name="dockerSeleniumGrid.parallelTesting">
+                <methods>
+                    <include name="triggeringChromeBrowser"/>
+                    <include name="triggeringFireFoxBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

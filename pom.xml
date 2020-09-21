@@ -116,6 +116,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
+                        <suiteXmlFile>parallelTesting.xml</suiteXmlFile>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
