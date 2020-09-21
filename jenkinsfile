@@ -4,7 +4,7 @@ node('master') {
         git 'https://github.com/mbilalkhawar/Assignment_IBM'
 
     }
-    stage('Launching Docker Images For Selnium Grid')
+    stage('Launching Docker Images For Selenium Grid')
     {
         bat 'docker-compose -f docker-compose.yml up -d'
     }
