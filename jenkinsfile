@@ -1,0 +1,18 @@
+node('master') {
+    stage('fetching latest image')
+    {
+        git 'https://github.com/mbilalkhawar/Assignment_IBM'
+
+    }
+    stage('Launching Docker Images For Selnium Grid')
+    {
+        bat 'docker-compose -f docker-compose.yml up -d'
+    }
+    stage('Building Maven and Executing TestCases'){
+        bat 'mvn clean verify'
+        echo 'Execute Successfully'
+    }
+    stage('Stopping the Docker Containers'){
+        bat 'docker-compose down'
+    }
+}
