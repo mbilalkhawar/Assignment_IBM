@@ -18,7 +18,7 @@ public class LoginPageTest extends BaseClass {
 
     @Test(priority = 1)
     public void testCurrentTitleOfThePage(){
-        Assert.assertEquals("Free CRM software helps any business large or small", lpg.titleOfThePage());
+        Assert.assertEquals("Free CRM for Small Businesses - FreeCRM.com", lpg.titleOfThePage());
     }
 
     @Test(priority = 2)
