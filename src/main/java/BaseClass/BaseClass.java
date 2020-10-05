@@ -6,6 +6,7 @@ package BaseClass;
 import Utility.UtilityClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.io.FileInputStream;
@@ -19,7 +20,7 @@ public class BaseClass {
     public static WebDriver driver;
     public static Properties propt;
   //  public static WebEventListener eventListener;
-    public static EventFiringWebDriver dr;
+   // public static EventFiringWebDriver dr;
 
     public BaseClass() {
         propt = new Properties();
@@ -39,7 +40,10 @@ public class BaseClass {
         {
             //System.setProperty("webdriver.chrome.driver", "\\src\\test\\WebDrivers\\chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\19174\\Desktop\\PreParation\\IntelliJProjects\\FreeCrm\\src\\test\\WebDrivers\\chromedriver.exe");
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            //options.addArguments("--headless");
+            driver = new ChromeDriver(options);
+
         }
 
         driver.manage().window().maximize();

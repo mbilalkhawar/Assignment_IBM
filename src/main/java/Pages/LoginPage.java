@@ -12,7 +12,7 @@ public class LoginPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.XPATH, using = "//ul[@class ='nav navbar-nav navbar-right']//li[1]")
+    @FindBy(how = How.XPATH, using = "//a[@class = 'btn btn-primary btn-xs-2 btn-shadow btn-rect btn-icon btn-icon-left']")
     //@FindBy(xpath = "//*[@id='navbar-collapse']/ul/li[1]")
     WebElement loginButton;
 
